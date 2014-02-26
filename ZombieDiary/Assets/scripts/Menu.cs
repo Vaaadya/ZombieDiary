@@ -7,16 +7,6 @@ public class Menu : MonoBehaviour {
 	void Start () {
 		gamePanel.SetActive(false);
 	}
-
-
-
-
-
-
-
-
-
-
 	// Update is called once per frame
 	void OnGUI () {
 		int btnWidth = Screen.width - Screen.width/10;
@@ -27,8 +17,8 @@ public class Menu : MonoBehaviour {
 		GUI.Button(new Rect(Screen.width/2 - btnWidth/2, 5*dist + 2*btnHeight, btnWidth, btnHeight), "Exitы");
 		if(btnStart)
 		{
-			gamePanel.SetActive(true);
 			this.gameObject.SetActive(false);
+			gamePanel.SetActive(true);
 		}
 	}
 }
