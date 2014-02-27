@@ -4,9 +4,15 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 	// Use this for initialization
 	public GameObject gamePanel;
-	public GameObject gameButtons;
-	void Start () {
+	public GameObject game_master;
+	void OnEnable ()
+	{
 		gamePanel.SetActive(false);
+		GameObject[] zombies = GameObject.FindGameObjectsWithTag("Zombie");
+		for (int i = 0; i < zombies.Length; i++)
+		{
+			Destroy(zombies[i].gameObject);
+		}
 	}
 	// Update is called once per frame
 	void OnGUI () {
@@ -19,8 +25,8 @@ public class Menu : MonoBehaviour {
 		if(btnStart)
 		{
 			this.gameObject.SetActive(false);
-			gameButtons.SetActive(true);
 			gamePanel.SetActive(true);
+			game_master.SendMessage("SetLastSpawn");
 			Time.timeScale = 1;
 		}
 	}

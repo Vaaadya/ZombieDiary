@@ -46,9 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameOver.cs" />
+     <Compile Include="Assets\scripts\CastleHealth.cs" />
      <Compile Include="Assets\scripts\Menu.cs" />
+     <Compile Include="Assets\scripts\Smile.cs" />
      <Compile Include="Assets\scripts\ToMainMenu.cs" />
+     <Compile Include="Assets\scripts\ToPauseMenu.cs" />
      <Compile Include="Assets\scripts\ZombieBehaviour.cs" />
+     <Compile Include="Assets\scripts\ZombieClick.cs" />
+     <Compile Include="Assets\scripts\ZombieHealth.cs" />
      <Compile Include="Assets\scripts\ZombieSpawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

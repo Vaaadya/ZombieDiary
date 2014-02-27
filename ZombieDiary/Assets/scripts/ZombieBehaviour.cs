@@ -5,6 +5,7 @@ public class ZombieBehaviour : MonoBehaviour {
 	public float zobbie_speed = 2;
 	public float min_distance = 0.5f;
 	private GameObject castle;
+	public float next_zombie_hit;
 	// Use this for initialization
 	void Start () {
 		castle = GameObject.FindWithTag ("Castle");
@@ -19,9 +20,14 @@ public class ZombieBehaviour : MonoBehaviour {
 		{
 			rigidbody2D.velocity = dir.normalized * zobbie_speed;
 		}
-			else
+		else
 		{
 			rigidbody2D.velocity = new Vector2(0, 0);
+			if (Time.time > next_zombie_hit)
+			{
+				castle.SendMessage("EatBase", SendMessageOptions.DontRequireReceiver);
+				next_zombie_hit = Time.time + 1;	
+			}
 		}
 
 	}
