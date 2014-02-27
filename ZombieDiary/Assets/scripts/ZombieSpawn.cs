@@ -10,7 +10,7 @@ public class ZombieSpawn : MonoBehaviour {
 	public GameObject spawn_position3;
 	public GameObject spawn_position4;
 	private GameObject[] spawn = new GameObject[4];
-	private float end_round = 1;
+	private float end_round = 10;
 	//private bool is_spawn = true;
 	float last_spawn = 0;
 	// Use this for initialization

@@ -6,7 +6,7 @@ public class CastleHealth : MonoBehaviour {
 	private bool is_time_ended = false;
 	public GameObject game_over_menu;
 	private int heath = 10;
-	private float round_time = 1;
+	private float round_time = 10;
 	// Use this for initialization
 	void Start () {
 	

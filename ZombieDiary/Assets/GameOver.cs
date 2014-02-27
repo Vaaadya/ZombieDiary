@@ -39,7 +39,6 @@ public class GameOver : MonoBehaviour {
 		else 
 		{
 			GUI.Label (new Rect (10, 10, 50, 50), "LOSE");
-			GUI.Label (new Rect (10, 10, 50, 50), "WIN");
 			bool btn_next_level = GUI.Button(new Rect(Screen.width/2 - btnWidth/2, dist, btnWidth, btnHeight), "Retry");
 			bool btn_main = GUI.Button(new Rect(Screen.width/2 - btnWidth/2, 3*dist + btnHeight, btnWidth, btnHeight), "Main menu");
 			if(btn_next_level)
